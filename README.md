@@ -9,7 +9,12 @@
 
 
 ## reglas del juego
-- inicia:cuando se selecciona una casilla cronometreamos con https://codesandbox.io/s/5yi5k?file=/src/App.js
+- inicia:cuando se selecciona una casilla cronometreamos con
+
+
+ https://codesandbox.io/s/5yi5k?file=/src/App.js
+
+ 
 - gana: si desmarca todas las ubicaciones que no tiene minas se guarda en una tabla de pociciones necesitamos nick,tiempo y mostramos tabla de pocisiones
 
 - pierde: si toca una mina
