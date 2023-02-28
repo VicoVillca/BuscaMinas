@@ -22,7 +22,7 @@ root.render(
         path="*"
         element={
           <main>
-            <p>There's nothing here!</p>
+            <p>paguina no encontrada!</p>
           </main>
         }
       ></Route>
