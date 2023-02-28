@@ -16,11 +16,14 @@
   background-color: #4caf50;
   color: black;
   border: 2px solid #326234;
+  width: 50px;
+  height: 50px;
 }
 
 .button1:hover {
   background-color: white;
   color: #4caf50;
+
 }
 @media (max-width: 768px) {
   .btn,
