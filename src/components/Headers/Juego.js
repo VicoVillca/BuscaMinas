@@ -14,11 +14,11 @@ function Juego() {
       <Card.Header className="text-center bg-white">
         <i className="nc-icon nc-layout-11" />{" "}
         <Badge bg="light" text="dark">
-          10
+          7
         </Badge>
         <i className="nc-icon nc-layout-11" />{" "}
         <Badge bg="light" text="dark">
-          000
+          042
         </Badge>
         <span className="rounded">sdsd</span>
       </Card.Header>
