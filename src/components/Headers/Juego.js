@@ -4,13 +4,20 @@ import Badge from "react-bootstrap/Badge";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import "table.css";
+import "assets/css/tablero.css";
 function Juego() {
-  let tablero = Array(70)
-    .fill(0)
-    .map((row) => 0);
+  let tablero = [
+    [0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0],
+  ];
+
   return (
-    <Card className="text-center bg-dark" style={{ maxWidth: '25rem' }}>
+    <Card className="text-center bg-dark" style={{ maxWidth: "25rem" }}>
       <Card.Header className="text-center bg-white">
         <i className="nc-icon nc-layout-11" />{" "}
         <Badge bg="light" text="dark">
@@ -24,14 +31,12 @@ function Juego() {
       </Card.Header>
       <Card.Body>
         <Row className="justify-content-md-center">
-          <Col >
-            {tablero.slice(0, tablero.length).map((item, index) => {
-              return (
-                
-                  <Button className="button1" key={index}>{item}</Button>
-
-              );
-            })}
+          <Col>
+            <div className="tablero">
+              {tablero.slice(0, tablero.length).map((item, index) => {
+                return <div key={index}></div>;
+              })}
+            </div>
           </Col>
         </Row>
       </Card.Body>
