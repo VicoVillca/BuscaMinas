@@ -41,12 +41,42 @@ export default function Juego() {
     [0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0],
   ]);
-  const seleccionamosCasilla = (x, y) => {
-    console.log("click");
-    setContador(contador + 1);
-    tablero[x][y] = true;
+  const seleccionamosBug = (x, y) => {
+    if (x >= 0 && y >= 0 && x < tablero.length && y < tablero[0].length) {
+      if (minas[x + 1][y + 1] >= 0 && tablero[x][y] === false) {
+        tablero[x][y] = true;
+        setTablero(tablero);
+        //tenemso que seleccionar casillas de los lados como true
+        //como true
+        if (minas[x + 1][y + 1] === 0) {
+          seleccionamosBug(x - 1, y - 1);
+          seleccionamosBug(x - 1, y);
+          seleccionamosBug(x - 1, y + 1);
 
-    setTablero(tablero);
+          seleccionamosBug(x, y - 1);
+          //seleccionamosBug(x, y); ya marcamos
+          seleccionamosBug(x, y + 1);
+
+          seleccionamosBug(x + 1, y - 1);
+          seleccionamosBug(x + 1, y);
+          seleccionamosBug(x + 1, y + 1);
+        }
+      }
+    }
+  };
+  const seleccionamosCasilla = (x, y) => {
+    if (!tablero[x][y]) {
+      console.log("click");
+      setContador(contador + 1);
+
+      if (minas[x + 1][y + 1] === 0) {
+        seleccionamosBug(x, y);
+      } else {
+        tablero[x][y] = true;
+      }
+
+      setTablero(tablero);
+    }
   };
   const getCard = (x, y) => {
     if (!tablero[x][y]) {
@@ -59,16 +89,22 @@ export default function Juego() {
         ></div>
       );
     } else {
+      let casilla = "casillaAbierta2";
+      if ((x % 2 === 0 && y % 2 == 0) || (x % 2 === 1 && y % 2 == 1)) {
+        casilla = "casillaAbierta1";
+      }
       if (minas[x + 1][y + 1] > 0) {
         return (
-          <div className="casillaAbierta">
-            <p className={estilo[minas[x + 1][y + 1]-1]}>{minas[x + 1][y + 1]}</p>
+          <div className={casilla}>
+            <p className={estilo[minas[x + 1][y + 1] - 1]}>
+              {minas[x + 1][y + 1]}
+            </p>
           </div>
         );
       } else {
         if (minas[x + 1][y + 1] !== 0) {
           return (
-            <div className="casillaAbierta">
+            <div className={casilla}>
               <img
                 src="https://media.tenor.com/aZMV_bT0gVEAAAAj/the-blobs-live-on-bomb.gif"
                 alt="HTML tutorial"
@@ -76,7 +112,7 @@ export default function Juego() {
             </div>
           );
         } else {
-          return <div className="casillaAbierta"></div>;
+          return <div className={casilla}></div>;
         }
       }
     }

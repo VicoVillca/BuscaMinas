@@ -7,22 +7,22 @@
 .numero1{
     margin-top:5px;
     font-size: 25px;
-    color:green;
+    color:#1976d2;
 }
 .numero2{
     margin-top:5px;
     font-size: 25px;
-    color:blue;
+    color:#388e3c;
 }
 .numero3{
     margin-top:5px;
     font-size: 25px;
-    color: rgb(255, 0, 0);
+    color: #d33030;
 }
 .numero4{
     margin-top:5px;
     font-size: 25px;
-    color:rgb(0, 85, 0);
+    color:#7b1fa2;
 }
 .numero5{
     margin-top:5px;
@@ -50,22 +50,33 @@
 .casillaCerrada{
     width: 50px;
     height: 50px;
-    border: 1px solid black;
+    border: 1px solid #3F51B5;
     float: left;
-    background-color: #05abe0;				
+    background-color: #303F9F;				
     font-size: 30;	
     text-align: center;
 }
-.casillaAbierta{
+/*
+fondo #d7b899 #e5c29f
+*/
+.casillaAbierta1{
     width: 50px;
     height: 50px;
-    border: 1px solid black;
     float: left;
-    background-color: #ffffff;				
+    background-color: #e5c29f;				
+    font-size: 30;	
+    text-align: center;
+    
+}
+.casillaAbierta2{
+    width: 50px;
+    height: 50px;
+    float: left;
+    background-color: #d7b899;				
     font-size: 30;	
     text-align: center;
     
 }
 .casillaCerrada:hover {
-    background-color: yellow;
+    background-color: #3F51B5;
   }
