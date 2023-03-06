@@ -53,8 +53,15 @@
     border: 1px solid #3F51B5;
     float: left;
     background-color: #303F9F;				
-    font-size: 30;	
+    font-size: 30;
     text-align: center;
+}
+.info{
+    width: 35px;
+    height: 30px;
+
+    font-size: 25px;
+    color:#1976d2;
 }
 /*
 fondo #d7b899 #e5c29f
@@ -80,3 +87,43 @@ fondo #d7b899 #e5c29f
 .casillaCerrada:hover {
     background-color: #3F51B5;
   }
+.reitentar{
+    width: 100%;
+    margin-top:5px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border: 1px solid #3F51B5;
+    border-color: #3F51B5;
+    background-color: #303F9F;	
+}
+.reitentar:hover {
+    border: 1px solid #3F51B5;
+    background-color: #3F51B5;
+}
+.btnrecargar{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+.botones{
+    max-width: 100%;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-top: var(--bs-gutter-y);
+}
+.col{
+
+}
+.row > * {
+    flex-shrink: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-top: var(--bs-gutter-y);
+}
+.espacio{
+    width: 30px;
+}
