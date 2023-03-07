@@ -2,8 +2,6 @@ import React, { useEffect, useState, useCallback } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Card from "react-bootstrap/Card";
-import Badge from "react-bootstrap/Badge";
-import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "assets/css/tablero.css";
@@ -12,7 +10,6 @@ import reloj from "assets/img/reloj.png";
 export default function Juego(props) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
   const [contador, setContador] = useState(0);
   const [estilo] = useState([
     "numero1",
@@ -216,7 +213,10 @@ export default function Juego(props) {
         keyboard={false}
         centered
       >
-        <img src="https://media.tenor.com/APSSFvnUrdgAAAAM/sad-nuggie-gaming.gif" />
+        <img
+          src="https://media.tenor.com/APSSFvnUrdgAAAAM/sad-nuggie-gaming.gif"
+          alt="nombre"
+        />
         <Modal.Footer>
           <Button
             className="reitentar"
@@ -226,6 +226,7 @@ export default function Juego(props) {
             <img
               className="btnrecargar"
               src="//www.gstatic.com/images/icons/material/system/2x/refresh_white_24dp.png"
+              alt="nombre"
             />
             Reintentar
           </Button>
