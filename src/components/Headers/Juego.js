@@ -20,6 +20,8 @@ export default function Juego(props) {
     "numero6",
     "numero7",
     "numero8",
+    "numero9",
+    "numero10",
   ]);
   const [minas, setMinas] = useState([]);
   const [tablero, setTablero] = useState([]);
