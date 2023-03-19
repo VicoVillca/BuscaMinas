@@ -22,14 +22,14 @@
 
 
 ## colores de numeros cercanos a la mina
-1 :celeste
-2 :verde
-3 :rojo
-4 :azul
-5 :verde obscuro
-6 :guindo
-7 :
-8 :
+1 celeste
+2 verde
+3 rojo
+4 azul
+5 verde obscuro
+6 guindo
+7 ...
+8 ...
 
 ## logica del juego
 - generamos 10 minas randomicas 
