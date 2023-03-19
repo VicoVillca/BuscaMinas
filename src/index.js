@@ -17,16 +17,12 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter basename="/">
     
-    <Routes>
+    <Routes >
       <Route path="/" element={<Index />}></Route>
       <Route path="/ganador" element={<Ganadores />}></Route>
       <Route
         path="*"
-        element={
-          <main>
-            <p>paguina no encontrada!</p>
-          </main>
-        }
+        element={<Index />}
       ></Route>
     </Routes>
   </BrowserRouter>
