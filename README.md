@@ -39,9 +39,9 @@ y agregamos en una tabla de 10*10 que pintaremos en en tablero
 el tablero seran 10*10 butons y si se selecciona se vera el estado actual de la casilla
 
 ## logica del desmarcado
--1 :mina pierde el juego
-0 : es un espacio vacio y desmarca todos los espacios cercanos
-1 ...n: se muestra el valor de la matris
+-1. mina pierde el juego
+0. es un espacio vacio y desmarca todos los espacios cercanos
+1. ...n: se muestra el valor de la matris
 
 ## Banderita
 - colocamos banderita para marcarnos una mina

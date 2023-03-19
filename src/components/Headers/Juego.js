@@ -69,20 +69,20 @@ export default function Juego(props) {
         }
         tablero[x][y] = true;
       }
-      if(minas[x + 1][y + 1] >= 0){
-        let cerrados =0;
+      if (minas[x + 1][y + 1] >= 0) {
+        let cerrados = 0;
         for (let item of tablero) {
           for (const val of item) {
-            if(!val){
+            if (!val) {
               cerrados++;
             }
           }
         }
-        if(cerrados==8){
+        if (cerrados === 8) {
           //ganamos
           setGanar(true);
         }
-        console.log("casillas sin abrir"+cerrados);
+        console.log("casillas sin abrir" + cerrados);
       }
 
       setTablero(tablero);
@@ -263,7 +263,7 @@ export default function Juego(props) {
         keyboard={false}
         centered
       >
-         <img
+        <img
           src="https://thumbs.gfycat.com/AfraidInformalGazelle-max-1mb.gif"
           alt="nombre"
         />
@@ -275,7 +275,10 @@ export default function Juego(props) {
           <Button
             className="reitentar"
             variant="primary"
-            onClick={()=>{setGanar(false); limpiarIniciarJuego()}}
+            onClick={() => {
+              setGanar(false);
+              limpiarIniciarJuego();
+            }}
           >
             <img
               className="btnrecargar"
