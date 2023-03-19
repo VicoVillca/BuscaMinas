@@ -45,7 +45,11 @@ el tablero seran 10*10 butons y si se selecciona se vera el estado actual de la 
 
 ## Banderita
 - colocamos banderita para marcarnos una mina
-## Demo
+# origen de la paguina demo
 
+https://vicovillca.github.io/BuscaMinas/
+
+# Deproy en gitPages
+npm run deploy
 # proyecto base 
 https://demos.creative-tim.com/paper-kit-react/?_ga=2.7617077.623976117.1675809828-1857775338.1664461083#/index
