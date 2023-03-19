@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/BuscaMinas/static/css/main.1c765959.css",
-    "main.js": "/BuscaMinas/static/js/main.80695a07.js",
+    "main.js": "/BuscaMinas/static/js/main.5f6d4814.js",
     "static/media/antoine-barres.jpg": "/BuscaMinas/static/media/antoine-barres.bc3299c239c25e5bf937.jpg",
     "static/media/nucleo-icons.eot": "/BuscaMinas/static/media/nucleo-icons.bd42d77b9672555647d1.eot",
     "static/media/nucleo-icons.ttf": "/BuscaMinas/static/media/nucleo-icons.4466aeec3386b965a232.ttf",
@@ -10,10 +10,10 @@
     "static/media/nucleo-icons.woff2": "/BuscaMinas/static/media/nucleo-icons.ec16bc4cc4526801004d.woff2",
     "index.html": "/BuscaMinas/index.html",
     "main.1c765959.css.map": "/BuscaMinas/static/css/main.1c765959.css.map",
-    "main.80695a07.js.map": "/BuscaMinas/static/js/main.80695a07.js.map"
+    "main.5f6d4814.js.map": "/BuscaMinas/static/js/main.5f6d4814.js.map"
   },
   "entrypoints": [
     "static/css/main.1c765959.css",
-    "static/js/main.80695a07.js"
+    "static/js/main.5f6d4814.js"
   ]
 }
