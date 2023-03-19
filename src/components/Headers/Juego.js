@@ -10,6 +10,8 @@ import reloj from "assets/img/reloj.png";
 export default function Juego(props) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
+  const [ganar, setGanar] = useState(false);
+  const handleGanar = () => setGanar(false);
   const [contador, setContador] = useState(0);
   const [estilo] = useState([
     "numero1",
@@ -57,12 +59,30 @@ export default function Juego(props) {
 
       if (minas[x + 1][y + 1] === 0) {
         seleccionamosBug(x, y);
+        //verificamo si ganamos
+        // contamos en el tablero cuantos son false
+        // y si es 8 ganamos
       } else {
         if (minas[x + 1][y + 1] < 0) {
           setShow(true);
           console.log("encontramos una mina weee");
         }
         tablero[x][y] = true;
+      }
+      if(minas[x + 1][y + 1] >= 0){
+        let cerrados =0;
+        for (let item of tablero) {
+          for (const val of item) {
+            if(!val){
+              cerrados++;
+            }
+          }
+        }
+        if(cerrados==8){
+          //ganamos
+          setGanar(true);
+        }
+        console.log("casillas sin abrir"+cerrados);
       }
 
       setTablero(tablero);
@@ -231,6 +251,38 @@ export default function Juego(props) {
               alt="nombre"
             />
             Reintentar
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
+      <Modal
+        size="sm"
+        show={ganar}
+        onHide={handleGanar}
+        backdrop="static"
+        keyboard={false}
+        centered
+      >
+         <img
+          src="https://thumbs.gfycat.com/AfraidInformalGazelle-max-1mb.gif"
+          alt="nombre"
+        />
+        <img
+          src="https://media.tenor.com/GNzyghMFaxEAAAAM/leonardo-di-carpio-congratulations.gif"
+          alt="nombre"
+        />
+        <Modal.Footer>
+          <Button
+            className="reitentar"
+            variant="primary"
+            onClick={()=>{setGanar(false); limpiarIniciarJuego()}}
+          >
+            <img
+              className="btnrecargar"
+              src="//www.gstatic.com/images/icons/material/system/2x/refresh_white_24dp.png"
+              alt="nombre"
+            />
+            Volver a jugar
           </Button>
         </Modal.Footer>
       </Modal>

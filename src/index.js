@@ -11,6 +11,7 @@ import "assets/scss/paper-kit.scss?v=1.3.0";
 import "assets/demo/demo.css?v=1.3.0";
 // pages
 import Index from "views/Index.js";
+import Ganadores from 'views/Ganadores';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,6 +19,7 @@ root.render(
     
     <Routes>
       <Route path="/" element={<Index />}></Route>
+      <Route path="/ganador" element={<Ganadores />}></Route>
       <Route
         path="*"
         element={
