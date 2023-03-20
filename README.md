@@ -1,8 +1,8 @@
 # BuscaMinas
 ## pantallas
 
-- inicio: escoje nivel y piede ver las intrucciones
-- juego:puede jugar y volver al inicio
+- inicio: escoje nivel y puede ver las intrucciones
+- juego: puede jugar y volver al inicio
 - tabla de pociciones: se muestra el rankin
 - perdida de juego: se informa al usuario que perdio
 

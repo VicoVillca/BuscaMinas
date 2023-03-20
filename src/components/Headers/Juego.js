@@ -8,6 +8,7 @@ import "assets/css/tablero.css";
 import bomba from "assets/img/bomba.png";
 import reloj from "assets/img/reloj.png";
 export default function Juego(props) {
+  const [tiempo, setTiempo] = useState(0);
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const [ganar, setGanar] = useState(false);
@@ -96,6 +97,7 @@ export default function Juego(props) {
   };
   const limpiarIniciarJuego = useCallback(() => {
     console.log("Limpiamos Iniciamos juego");
+
     let tab = Array(8)
       .fill(0)
       .map((row) => new Array(7).fill(false));
@@ -108,7 +110,7 @@ export default function Juego(props) {
 
     for (let i = 0; i < tab.length; i++) {
       let y = Math.trunc(Math.random() * tab[i].length) + 1;
-      console.log(y - 1);
+      //console.log(y - 1);
       let x = i + 1;
       aux[x - 1][y - 1]++;
       aux[x - 1][y]++;
@@ -127,7 +129,8 @@ export default function Juego(props) {
     setTablero(tab);
     setMinas(aux);
     setShow(false);
-  }, [setBandera, setTablero, setMinas, setShow]);
+    setTiempo(0);
+  }, [setBandera, setTablero, setMinas, setShow, setTiempo]);
   const getCard = (x, y) => {
     if (!tablero[x][y]) {
       return (
@@ -179,10 +182,21 @@ export default function Juego(props) {
       }
     }
   };
+
   useEffect(() => {
     limpiarIniciarJuego();
-  }, [limpiarIniciarJuego]);
+    const cl = setInterval(() => {
+      
+      console.log("tiempo "+ganar);
+        console.log("Seguimos pulsando");
+        setTiempo((tiempo) => tiempo + 1);
+      
+    }, 1000);
+    console.log("asd");
+    return () => clearInterval(cl);
+  }, [limpiarIniciarJuego,ganar]);
 
+  
   return (
     <>
       <Card style={{ maxWidth: "25rem" }}>
@@ -197,7 +211,7 @@ export default function Juego(props) {
               <div className="info ">
                 <img src={reloj} alt="HTML tutorial" />
               </div>
-              <div className="numero1">123</div>
+              <div className="numero1"> {"     " + tiempo}</div>
             </Col>
           </Row>
         </Card.Header>
