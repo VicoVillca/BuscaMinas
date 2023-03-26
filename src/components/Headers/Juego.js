@@ -188,7 +188,7 @@ export default function Juego(props) {
     const cl = setInterval(() => {
       
       console.log("tiempo "+ganar);
-        console.log("Seguimos pulsando");
+        console.log("Seguimos pulsandoo");
         setTiempo((tiempo) => tiempo + 1);
       
     }, 1000);
